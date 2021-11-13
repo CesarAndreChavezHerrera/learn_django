@@ -17,8 +17,10 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
 from home import urls
+from datos import urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/',include('home.urls')),
+    path('datos/',include('datos.urls')),
 ]
