@@ -1,1 +1,60 @@
-<h1>hola</h1>
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+    <head>
+        <title>home</title>
+        <link rel="stylesheet" type="text/css" href="{%static 'css/estilo.css'%}">
+    </head>
+    <body>
+        <header>
+            <h1>Home</h1>
+            <nav>
+                <a href="/home/">
+                    pagina principal
+                </a>
+                <a href="/datos/">
+                    contacto
+                </a>
+            </nav>
+        </header>
+        <section>
+            <article>
+                <h2>Laser</h2>
+                <p> Es un acrónimo inglés y las letras en la 
+                    palabra láser representan Light 
+                    Amplification by Stimulated Emission of 
+                    Radiation. Esto significa la amplificación
+                    de la luz por emisión estimulada de radiación. 
+                    Un láser es una fuente de luz inusual. Es muy diferente de una bombilla o una luz de flash.
+                    Los láseres producen un rayo de luz muy estrecho. 
+                </p>
+                <img src="{%static 'imagen/laser_1.jpg'%}">
+            </article>
+
+            <article>
+                <h2>¿como funciona?</h2>
+                <p>
+                    La luz viaja en ondas, y la distancia entre los picos de una onda se 
+                    denomina longitud de onda.
+                    Cada color de luz tiene una 
+                    longitud de onda diferente. 
+                    Por ejemplo, la luz azul tiene una longitud 
+                    de onda más corta que la luz 
+                    roja. La luz solar, y la luz 
+                    típica de una bombilla, 
+                    se compone de luz con muchas 
+                    longitudes de onda diferentes. 
+                    Nuestros ojos ven esta mezcla de 
+                    longitudes de onda como luz 
+                    blanca.
+                </p>
+                <img src="{%static 'imagen/ondas.jpg'%}">
+            </article>
+
+        </section>
+        <footer>
+            <h3>datos</h3>
+        </footer>
+    </body>
+</html>

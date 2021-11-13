@@ -1,0 +1,26 @@
+body{
+    margin: 2%;
+    text-align: center;
+    align-items: center;
+    
+}
+a{
+    margin: 10%;
+}
+nav{
+    background-color: gray;
+    padding: 2%;
+}
+article{
+    
+    background-color: gray;
+    
+}
+
+footer{
+    background-color: gray;
+}
+
+img{
+    width: 20%;
+}
