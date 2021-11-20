@@ -15,7 +15,8 @@
             
             
         </div>
-        <form class="main">
+        <form class="main" action="/contacto/" method="post">
+            {% csrf_token %}
             <h2>Preguntas</h2>
             <section class="fakeimg" style="height:200px;">
                 <p>
