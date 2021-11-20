@@ -1,1 +1,60 @@
-<h1>test de funcionamiento </h1>
+{% load static %}
+<html>
+
+    <head>
+        <title>Contacto</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{%static 'estilo.css'%}">
+    </head>
+
+    <body>
+        <div class="navbar">
+            <a href="/home/" >Home</a>
+            <a href="/contacto/" class="active">contacto</a>
+            
+            
+        </div>
+        <form class="main">
+            <h2>Preguntas</h2>
+            <section class="fakeimg" style="height:200px;">
+                <p>
+                    Nombre
+                    <input type="text" name="nombre">
+                </p>
+            
+                <p>
+                    Tema
+                    <input type="text" name="tema">
+                </p>
+            
+            
+                <p >
+                    Pregunta
+                    <input type="text" name="pregunta">
+                    
+                </p>
+
+                <p>
+                    <input type="submit" value="Enviar">
+                </p>
+            </section>     
+        </form>
+
+        <section class="main">
+            <h2>Buzon</h2>
+            {% for i in consulta %}
+            <article class="fakeimg" style="height:200px;">
+                <h2>
+                    {{ i.tema }} por {{ i.nombre }}
+                </h2>
+                <h4>
+                    {{i.pregunta}}
+                </h4>
+            </article>
+            </br>
+            {% endfor %}
+        </section>
+
+    </body>
+</html>
