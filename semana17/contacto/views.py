@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+def contacto_pagina(r):
+    return render(r,"contacto.html")
+    pass
