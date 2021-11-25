@@ -18,13 +18,17 @@
         <section class="main">
             <h2>Buzon</h2>
             {% for i in consulta %}
-            <article class="fakeimg" style="height:200px;">
+            <form class="fakeimg" style="height:200px;" action="/edicion/" method="post" >
+
                 <h2>
                     {{ i.tema }} por {{ i.nombre }}
                 </h2>
                 <h4>
                     {{i.pregunta}}
                 </h4>
+                {%csrf_token%}
+                <input type="text" value="{{i.id}}" name="id"  style="visibility:hidden;width:1px"/>  
+                <input type="submit" value="Eliminar" /></form></td> 
             </article>
             </br>
             {% endfor %}
