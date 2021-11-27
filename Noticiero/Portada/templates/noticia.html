@@ -1,6 +1,50 @@
-<html>
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+    <head>
+        <title>Home</title>
+        <meta charset="UTF-8">
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="{%static 'estilo.css'%}">
 
-    <h1>
-        hola mundo
-    </h1>
+    </head>
+    <body>
+
+        <div class="header">
+            <h1>Noticiero </h1>
+            <p> por <b>Cesar Chavez</b></p>
+        </div>
+
+        <div class="navbar">
+            <a href="/home/" class="active">Home</a>
+            <a href="/escribir/">Escribir una noticia</a>
+            <a href="/edicion/" >edictar</a>
+            <a href="/eliminar/" >Eliminar</a>
+    
+        </div>
+        <section class="main">
+            <h2>Articulos</h2>
+            
+            {% for i in noticia %}
+            <article class="fakeimg" style="height:200px;">
+                <h2>
+                    {{ i.tema }}
+                </h2>
+                <p>
+                    {{i.contenido}}
+                </p>
+                <h4>Por {{i.nombre}} a las {{i.fecha}}</h4>
+            </article>
+            </br>
+            {% endfor %}
+        </section>
+
+
+        <div class="footer">
+        <h2 >Mi github</h2>
+        <a href= "https://github.com/CesarAndreChavezHerrera">visitar</a>
+        </div>
+
+    </body>
 </html>
