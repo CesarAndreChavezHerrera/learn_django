@@ -11,11 +11,6 @@
     </head>
     <body>
 
-        <div class="header">
-            <h1>Noticiero </h1>
-            <p> por <b>Cesar Chavez</b></p>
-        </div>
-
         <div class="navbar">
             <a href="/home/" >Home</a>
             <a href="/escribir/">Escribir una noticia</a>
@@ -27,7 +22,7 @@
         <section class="main">
             <h2>Noticias publicadas </h2>
             {% for i in noticias %}
-            <form class="fakeimg" style="height:200px;" action="/edicion/" method="post" >
+            <form class="fakeimg" style="height:200px;" action="/eliminar/" method="post" >
 
                 <h2>
                     {{ i.tema }}
