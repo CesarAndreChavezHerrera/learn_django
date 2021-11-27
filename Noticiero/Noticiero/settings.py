@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Portada',
-    'Add_noticia'
+    'Add_noticia',
+    'Eliminar_noticias'
 ]
 
 MIDDLEWARE = [
