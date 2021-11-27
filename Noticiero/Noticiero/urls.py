@@ -17,8 +17,9 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
 from Portada import urls
-
+from  Add_noticia import urls
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/',include("Portada.urls")),
+    path('escribir/',include('Add_noticia.urls'))
 ]
