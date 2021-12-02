@@ -29,13 +29,15 @@
 
                 <form  action="/edicion/" method="post" >
                     {%csrf_token%}
-                    <input type="text" value="{{i.id}}" name="id_a_eliminar"  style="visibility:hidden;width:1px"/>  
+                    <input type="text" value="{{i.id}}" name="id"  style="visibility:hidden;width:1px"/>  
+                    <input type="text" value="eliminar" name="accion"  style="visibility:hidden;width:1px"/>
                     <input type="submit" value="Eliminar" />
                 </form> 
             
                 <form  action="/edicion/" method="post" >
                     {%csrf_token%}
-                    <input type="text" value="{{i.id}}" name="id_a_modificar"  style="visibility:hidden;width:1px"/>  
+                    <input type="text" value="{{i.id}}" name="id"  style="visibility:hidden;width:1px"/>
+                    <input type="text" value="modificar" name="accion"  style="visibility:hidden;width:1px"/>  
                     <input type="submit" value="Modificar" />
                 </form>
             </article>
