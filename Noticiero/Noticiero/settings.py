@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'Portada',
     'Add_noticia',
     'Eliminar_noticias',
-    'editar_noticias'
+    
 ]
 
 MIDDLEWARE = [

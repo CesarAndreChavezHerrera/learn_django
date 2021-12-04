@@ -19,11 +19,11 @@ from django.conf.urls import include
 from Portada import urls
 from  Add_noticia import urls
 from Eliminar_noticias import urls
-from editar_noticias import urls
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/',include("Portada.urls")),
     path('escribir/',include('Add_noticia.urls')),
     path('eliminar/',include('Eliminar_noticias.urls')),
-    path('edicion/',include("editar_noticias.urls"))
+    
 ]

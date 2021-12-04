@@ -1,0 +1,57 @@
+{% load static %}
+<html lang="es">
+    <head>
+        <title>Home</title>
+        <meta charset="UTF-8">
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="{%static 'estilo.css'%}">
+
+    </head>
+    <body>
+
+        <div class="navbar">
+            <a href="/home/" >Home</a>
+            <a href="/escribir/">Escribir una noticia</a>
+            <a href="/eliminar/ " class="active">Eliminar</a>
+    
+        </div>
+        <section class="main">
+            <h2>Buzon</h2>
+            {% if consulta %}
+            <form class="main" action="/eliminar/" method="post">
+                {% csrf_token %}
+                <h2>Preguntas</h2>
+                <section class="fakeimg" style="height:200px;">
+
+                    <p>
+                        Nombre
+                        <input type="text" name="nombre" value={{consulta.nombre}}>
+                    </p>
+                
+                    <p>
+                        Tema
+                        <input type="text" name="tema" value={{consulta.tema}}>
+                    </p>
+                
+                
+                    <p >
+                        Pregunta
+                        <input type="text" name="pregunta" value={{consulta.pregunta}}>
+                        
+                    </p>
+                                        
+                    <p>
+                        <input type="submit" value="Modificar">
+                    </p>
+                    <input type="text" value="{{consulta.id}}" name="id"  style="visibility:hidden;width:1px"/>
+                    
+                    <input type="text" value="guardar_cambio" name="accion"  style="visibility:hidden;width:1px"/>
+
+                </section>     
+            </form>
+            {% endif %}
+        </section>
+
+    </body>
+</html>
